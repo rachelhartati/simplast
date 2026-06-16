@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* ========================= */
+/* LEFT SIDE */
+/* ========================= */
+
+.left{
+    flex: 1;
+    background: linear-gradient(135deg, #16c79a, #0fb9b1);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 50px;
+}
+
+.left-content{
+    position: relative;
+    z-index: 2;
+    margin-top: 70px;
+}
+
+.left h1{
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.line{
+    width: 45px;
+    height: 3px;
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.left p{
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+/* ========================= */
+/* BACKGROUND CIRCLE */
+/* ========================= */
+
+.circle{
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+}
+
+.c1{
+    width: 220px;
+    height: 220px;
+    bottom: -60px;
+    left: -60px;
+}
+
+.c2{
+    width: 340px;
+    height: 340px;
+    bottom: -140px;
+    left: 70px;
+}
+
+.c3{
+    width: 170px;
+    height: 170px;
+    bottom: 60px;
+    left: 180px;
+}
+
+/* ========================= */
+/* CHECK ICON */
+/* ========================= */
+
+.check-wrapper{
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.18);
+    border: 2px solid rgba(255,255,255,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.check-inner{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.check-inner svg{
+    color: #16c79a;
+    width: 30px;
+    height: 30px;
+}
+
+/* ========================= */
+/* RIGHT SIDE */
+/* ========================= */
+
+.right{
+    flex: 1.5;
+    background: #f8f8f8;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-center{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ========================= */
+/* LOGO */
+/* ========================= */
+
+.logo{
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #555;
+}
+
+.logo span{
+    color: #16c79a;
+}
+
+.subtitle{
+    margin-top: 10px;
+    color: #666;
+    font-size: 16px;
+}
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.card{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.card:hover{
+    transform: translateY(-3px);
+    border-color: #16c79a;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.icon-box{
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-box svg{
+    width: 24px;
+    height: 24px;
+    stroke-width: 2.2;
+}
+
+.green{
+    background: #dff7ec;
+    color: #2f8f62;
+}
+
+.orange{
+    background: #fff0df;
+    color: #d88a2d;
+}
+
+.blue{
+    background: #e2f0ff;
+    color: #3b6c8f;
+}
+
+.card-title{
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+}
+
+.card-desc{
+    font-size: 14px;
+    color: #777;
+    margin-top: 3px;
+}
+
+/* ========================= */
+/* FORM CONTAINER */
+/* ========================= */
+
+.form-container{
+    width: 380px;
+    margin: 0 auto;
+}
+
+/* ========================= */
+/* INPUT */
+/* ========================= */
+
+label{
+    font-size: 15px;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+
+label span{
+    color: red;
+}
+
+input{
+    width: 100% !important;
+    padding: 14px !important;
+    border-radius: 12px !important;
+    border: 1px solid #ddd !important;
+    margin-bottom: 22px !important;
+    outline: none !important;
+    font-size: 14px !important;
+    transition: 0.2s;
+    background: white !important;
+    color: #333 !important;
+    box-shadow: none !important;
+}
+
+input:focus{
+    border-color: #16c79a !important;
+    box-shadow: 0 0 0 3px rgba(22,199,154,0.1) !important;
+}
+
+button{
+    width: 180px !important;
+    padding: 13px !important;
+    background: #16c79a !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 30px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    display: block !important;
+    margin: 15px auto !important;
+    transition: 0.2s;
+}
+
+button:hover{
+    background: #11b78d !important;
+    transform: translateY(-2px);
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer-note{
+    margin-top: 25px;
+    background: #e9f7f3;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #4d7b74;
+    font-size: 14px;
+}
+
+.footer-note svg{
+    width: 18px;
+    height: 18px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width: 768px){
+
+    body{
+        flex-direction: column;
+    }
+
+    .left{
+        width: 100%;
+        min-height: 320px;
+        padding: 40px 30px 100px;
+    }
+
+    .left-content{
+        margin-top: 40px;
+    }
+
+    .right{
+        padding: 35px 25px;
+    }
+
+    .logo{
+        font-size: 36px;
+    }
+
+    .card-title{
+        font-size: 18px;
+    }
+
+    .card-desc{
+        font-size: 13px;
+    }
+
+    .check-wrapper{
+        bottom: 40px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .check-inner{
+        width: 60px;
+        height: 60px;
+    }
+
+    .check-inner svg{
+        width: 26px;
+        height: 26px;
+    }
+}
+
