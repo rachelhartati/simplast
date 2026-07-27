@@ -23,22 +23,23 @@
 
         body {
             background: #f4f4f4;
+            font-size: 14px;
         }
 
         .container {
             display: flex;
         }
 
-                /* ================= SIDEBAR ================= */
+        /* ================= SIDEBAR ================= */
 
         .sidebar {
-            width: 260px;
+            width: 220px;
             background: linear-gradient(to bottom, #10c9a3, #00997b);
             height: 100vh;
             position: fixed;
             left: 0;
             top: 0;
-            padding: 30px 22px;
+            padding: 22px 18px;
             color: white;
             overflow: auto;
             transition: 0.3s;
@@ -46,9 +47,9 @@
         }
 
         .logo {
-            font-size: 34px;
+            font-size: 24px;
             font-weight: 700;
-            margin-bottom: 50px;
+            margin-bottom: 34px;
             transition: 0.3s;
         }
 
@@ -57,7 +58,13 @@
         }
 
         .menu li {
-            margin-bottom: 28px;
+            margin-bottom: 18px;
+        }
+
+        .menu-title span {
+            font-size: 11px;
+            opacity: 0.75;
+            letter-spacing: 0.5px;
         }
 
         .menu li a {
@@ -65,8 +72,8 @@
             color: white;
             display: flex;
             align-items: center;
-            gap: 14px;
-            font-size: 17px;
+            gap: 10px;
+            font-size: 14px;
             font-weight: 500;
             transition: 0.3s;
         }
@@ -74,15 +81,32 @@
         .menu li a:hover {
             transform: translateX(5px);
         }
-        .logout-btn { background: none; border: none; width: 100%; padding: 0; cursor: pointer; color: white; display: flex; align-items: center; gap: 14px; font-size: 17px; font-weight: 500; transition: 0.3s; }
-        .logout-btn:hover { transform: translateX(5px); }
+
+        .logout-btn {
+            background: none;
+            border: none;
+            width: 100%;
+            padding: 0;
+            cursor: pointer;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .logout-btn:hover {
+            transform: translateX(5px);
+        }
 
         .sidebar.close {
-            width: 90px;
+            width: 78px;
         }
 
         .sidebar.close .logo {
-            font-size: 18px;
+            font-size: 16px;
         }
 
         .sidebar.close .menu li a span {
@@ -92,47 +116,29 @@
         /* ================= MAIN ================= */
 
         .main {
-            margin-left: 260px;
+            margin-left: 220px;
             width: 100%;
             transition: 0.3s;
         }
 
         .main.full {
-            margin-left: 90px;
-        }
-
-        /* ================= SIDEBAR CLOSE ================= */
-
-        .sidebar.close {
-            width: 90px;
-        }
-
-        .sidebar.close .logo {
-            font-size: 18px;
-        }
-
-        .sidebar.close .menu li a span {
-            display: none;
-        }
-
-        .main.full {
-            margin-left: 90px;
+            margin-left: 78px;
         }
 
         /* ================= TOPBAR ================= */
 
         .topbar {
-            height: 70px;
+            height: 56px;
             background: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 30px;
+            padding: 0 22px;
             border-bottom: 1px solid #ddd;
         }
 
         .menu-toggle {
-            font-size: 30px;
+            font-size: 22px;
             color: #444;
             cursor: pointer;
         }
@@ -140,42 +146,43 @@
         .admin-profile {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 15px;
+            gap: 8px;
+            font-size: 13px;
             color: #444;
         }
 
         .admin-profile i {
-            font-size: 28px;
+            font-size: 22px;
         }
 
         /* ================= CONTENT ================= */
 
         .content {
-            padding: 30px;
+            padding: 22px;
         }
 
         .title {
-            font-size: 32px;
+            font-size: 24px;
             font-weight: 700;
-            margin-bottom: 5px;
+            margin-bottom: 4px;
         }
 
         .subtitle {
             color: #777;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            font-size: 13px;
         }
 
         /* ================= FILTER ================= */
 
         .filter-box {
             background: white;
-            border-radius: 12px;
-            padding: 16px;
+            border-radius: 10px;
+            padding: 12px;
             display: flex;
-            gap: 20px;
+            gap: 14px;
             align-items: center;
-            margin-bottom: 25px;
+            margin-bottom: 18px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
@@ -185,51 +192,52 @@
 
         .input-group i {
             position: absolute;
-            left: 14px;
+            left: 12px;
             top: 50%;
             transform: translateY(-50%);
             color: #999;
+            font-size: 13px;
         }
 
         .input {
-            height: 48px;
-            width: 260px;
+            height: 40px;
+            width: 220px;
             border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 0 14px 0 42px;
+            border-radius: 7px;
+            padding: 0 12px 0 36px;
             outline: none;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .select {
-            height: 48px;
-            width: 180px;
+            height: 40px;
+            width: 160px;
             border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 0 14px;
+            border-radius: 7px;
+            padding: 0 12px;
             outline: none;
             background: white;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .date-input {
-            height: 48px;
-            width: 180px;
+            height: 40px;
+            width: 160px;
             border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 0 14px 0 42px;
+            border-radius: 7px;
+            padding: 0 12px 0 36px;
             outline: none;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .btn-add {
-            height: 48px;
+            height: 40px;
             background: #01C094;
             color: white;
             border: none;
-            border-radius: 8px;
-            padding: 0 20px;
-            font-size: 14px;
+            border-radius: 7px;
+            padding: 0 16px;
+            font-size: 13px;
             font-weight: 500;
             font-family: 'Poppins', sans-serif;
             cursor: pointer;
@@ -249,7 +257,7 @@
 
         .table-box {
             background: white;
-            border-radius: 16px;
+            border-radius: 14px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
@@ -261,24 +269,26 @@
 
         table th {
             background: #f8f8f8;
-            padding: 16px;
+            padding: 12px 14px;
             text-align: left;
-            font-size: 13px;
+            font-size: 12px;
             color: #666;
+            white-space: nowrap;
         }
 
         table td {
-            padding: 16px;
+            padding: 12px 14px;
             border-top: 1px solid #eee;
-            font-size: 14px;
+            font-size: 13px;
             vertical-align: middle;
         }
 
         .badge {
-            padding: 6px 12px;
+            padding: 4px 10px;
             border-radius: 6px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
+            display: inline-block;
         }
 
         .green {
@@ -291,48 +301,25 @@
             color: #d94b4b;
         }
 
-        .status-success {
-            color: #1ca54f;
-            font-weight: 600;
-            font-size: 13px;
-        }
-
-        .status-warning {
-            color: #f0a500;
-            font-weight: 600;
-            font-size: 13px;
-        }
-
         /* ================= ACTION BUTTON ================= */
 
         .action {
             display: flex;
             align-items: center;
-            gap: 10px;
-        }
-
-        .btn-action {
-            width: 38px;
-            height: 38px;
-            border: none;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: 0.3s;
-            font-size: 16px;
+            gap: 6px;
+            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 7px 12px;
+            padding: 6px 10px;
             border: none;
             border-radius: 6px;
-            font-size: 12px;
+            font-size: 11px;
             cursor: pointer;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
+            white-space: nowrap;
         }
 
         .btn-view {
@@ -348,12 +335,6 @@
         .btn-delete {
             background: #ffe5e5;
             color: #e53935;
-        }
-
-
-        .action {
-            display: flex;
-            gap: 8px;
         }
 
         .btn-view:hover {
@@ -376,11 +357,11 @@
         /* ================= FOOTER ================= */
 
         .table-footer {
-            padding: 20px 24px;
+            padding: 16px 18px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 13px;
+            font-size: 12px;
             color: #777;
         }
 
@@ -389,12 +370,12 @@
         .pagination {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .pagination button {
-            width: 34px;
-            height: 34px;
+            width: 28px;
+            height: 28px;
             border: none;
             border-radius: 50%;
             background: #4a4a4a;
@@ -403,7 +384,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 14px;
+            font-size: 12px;
             transition: 0.3s;
         }
 
@@ -412,14 +393,14 @@
         }
 
         .page-number {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 15px;
+            font-size: 13px;
             color: #111;
             transition: 0.3s;
         }
@@ -438,7 +419,7 @@
         @media(max-width:768px) {
 
             .sidebar {
-                width: 90px;
+                width: 78px;
             }
 
             .menu li a span {
@@ -446,15 +427,15 @@
             }
 
             .logo {
-                font-size: 18px;
+                font-size: 16px;
             }
 
             .main {
-                margin-left: 90px;
+                margin-left: 78px;
             }
 
             .main.full {
-                margin-left: 90px;
+                margin-left: 78px;
             }
 
             .filter-box {
@@ -638,9 +619,22 @@
 
                     <select name="status" class="select" onchange="this.form.submit()">
                         <option value="">Semua Status</option>
-                        <option value="pending"   {{ request('status') == 'pending'   ? 'selected' : '' }}>Menunggu</option>
-                        <option value="approved"  {{ request('status') == 'approved'  ? 'selected' : '' }}>Disetujui</option>
-                        <option value="rejected"  {{ request('status') == 'rejected'  ? 'selected' : '' }}>Ditolak</option>
+                        <option value="{{ \App\Models\AgentRequest::STATUS_WAITING }}"
+                            {{ request('status') == \App\Models\AgentRequest::STATUS_WAITING ? 'selected' : '' }}>
+                            Menunggu
+                        </option>
+                        <option value="{{ \App\Models\AgentRequest::STATUS_APPROVED }}"
+                            {{ request('status') == \App\Models\AgentRequest::STATUS_APPROVED ? 'selected' : '' }}>
+                            Disetujui
+                        </option>
+                        <option value="{{ \App\Models\AgentRequest::STATUS_REJECTED }}"
+                            {{ request('status') == \App\Models\AgentRequest::STATUS_REJECTED ? 'selected' : '' }}>
+                            Ditolak
+                        </option>
+                        <option value="{{ \App\Models\AgentRequest::STATUS_RECEIVED }}"
+                            {{ request('status') == \App\Models\AgentRequest::STATUS_RECEIVED ? 'selected' : '' }}>
+                            Diterima
+                        </option>
                     </select>
 
                     <div class="input-group">
@@ -682,7 +676,7 @@
                         </thead>
 
                         <tbody>
-                            @foreach ($requests as $req)
+                            @forelse ($requests as $req)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$req->tanggal_request}}</td>
@@ -691,33 +685,48 @@
                                 <td>{{$req->jumlah_barang}}</td>
                                 <td>{{$req->total}}</td>
                                 <td>
-                                 @if($req->status == 'pending')
-                                <span class="badge" style="background:#fff8e1; color:#f59e0b; border:1px solid #fcd34d;">
-                                 <i class="bi bi-hourglass-split"></i>
-                                Menunggu
-                                </span>
-                                 @elseif($req->status == 'rejected')
-                               <span class="badge" style="background:#ffe0e0; color:#d94b4b; border:1px solid #fca5a5;">
-                               <i class="bi bi-x-circle-fill"></i>
-                                Ditolak
-                                </span>
-                                @elseif($req->status == 'approved')
-                               <span class="badge" style="background:#d8f7df; color:#1ca54f; border:1px solid #86efac;">
-                               <i class="bi bi-check-circle-fill"></i>
-                                Disetujui
-                                </span>
-                                @endif
+                                    @if($req->isWaiting())
+                                    <span class="badge" style="background:#fff8e1; color:#f59e0b; border:1px solid #fcd34d;">
+                                        <i class="bi bi-hourglass-split"></i>
+                                        Menunggu
+                                    </span>
+                                    @elseif($req->isRejected())
+                                    <span class="badge" style="background:#ffe0e0; color:#d94b4b; border:1px solid #fca5a5;">
+                                        <i class="bi bi-x-circle-fill"></i>
+                                        Ditolak
+                                    </span>
+                                    @elseif($req->isApproved())
+                                    <span class="badge" style="background:#d8f7df; color:#1ca54f; border:1px solid #86efac;">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        Disetujui
+                                    </span>
+                                    @elseif($req->isReceived())
+                                    <span class="badge" style="background:#e0f2fe; color:#0284c7; border:1px solid #7dd3fc;">
+                                        <i class="bi bi-box-seam-fill"></i>
+                                        Diterima
+                                    </span>
+                                    @endif
                                 </td>
                                 <td>
                                     <div class="action">
 
-                                        
+                                        {{--
+                                            Detail selalu tampil untuk admin & agent.
+                                            - Admin masuk ke Detail untuk approve/reject (konfirmasi).
+                                            - Agent masuk ke Detail untuk sekadar melihat requestnya.
+                                        --}}
                                         <a href="{{route('request.detail', $req->id)}}" class="btn btn-add">
                                             Detail
                                         </a>
 
+                                        {{--
+                                            Edit & Hapus HANYA untuk agent (pemilik request),
+                                            dan hanya selama status masih Menunggu.
+                                            Admin TIDAK pernah mendapat tombol ini — tugas admin
+                                            hanya approve/reject lewat halaman Detail.
+                                        --}}
                                         @hasrole('agent')
-                                        @if($req->status == 'pending')
+                                        @if($req->isWaiting())
                                         <a href="{{route('request.edit', $req->id)}}" class="btn btn-edit">
                                             Edit
                                         </a>
@@ -736,12 +745,17 @@
                                     </div>
                                 </td>
                             </tr>
-                            @endforeach
+                            @empty
+                            <tr>
+                                <td colspan="8" style="text-align:center; padding:24px; color:#999;">
+                                    Belum ada data pesanan.
+                                </td>
+                            </tr>
+                            @endforelse
                         </tbody>
 
                     </table>
 
-                    <!-- FOOTER -->
                     <!-- FOOTER -->
                     <div class="table-footer">
 
@@ -751,13 +765,11 @@
 
                         @if ($requests->lastPage() > 1)
                         <div class="pagination">
-                            {{-- Tombol Prev --}}
                             <button onclick="window.location='{{ $requests->previousPageUrl() }}'"
                                 {{ $requests->onFirstPage() ? 'disabled' : '' }}>
                                 <i class="bi bi-chevron-left"></i>
                             </button>
 
-                            {{-- Nomor Halaman --}}
                             @for ($i = 1; $i <= $requests->lastPage(); $i++)
                                 <div class="page-number {{ $requests->currentPage() == $i ? 'active' : '' }}"
                                     onclick="window.location='{{ $requests->url($i) }}'">
@@ -765,7 +777,6 @@
                                 </div>
                                 @endfor
 
-                                {{-- Tombol Next --}}
                                 <button onclick="window.location='{{ $requests->nextPageUrl() }}'"
                                     {{ $requests->currentPage() == $requests->lastPage() ? 'disabled' : '' }}>
                                     <i class="bi bi-chevron-right"></i>
@@ -783,18 +794,14 @@
     </div>
 
     <script>
-        // SIDEBAR TOGGLE
         const menuToggle = document.getElementById("menuToggle");
         const sidebar = document.getElementById("sidebar");
         const main = document.getElementById("main");
 
         menuToggle.addEventListener("click", () => {
-
             sidebar.classList.toggle("close");
             main.classList.toggle("full");
-
         });
-
     </script>
 
     <script>
@@ -808,8 +815,7 @@
         Swal.fire({ icon: 'warning', title: 'Perhatian!', text: "{{ session('warning') }}" });
         @endif
     </script>
-        </div>
-    </div>
+
     <form id="logoutForm" action="{{ route('logout') }}" method="POST" style="display:none;">@csrf</form>
     <script>
     function confirmLogout() {
@@ -829,6 +835,7 @@
             }
         });
     }
-    </script></body>
+    </script>
+</body>
 
 </html>

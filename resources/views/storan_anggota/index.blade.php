@@ -674,7 +674,7 @@
                             <th>Tanggal</th>
                             <th>Item</th>
                             <th>Jumlah (pcs)</th>
-                            <th>Total</th>
+                            <th>Total Harga</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>

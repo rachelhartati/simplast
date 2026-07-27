@@ -17,6 +17,7 @@ class StoranAnggota extends Model
         'user_id',
         'item_id',
         'jumlah_pcs',
+        'harga_per_pcs',
         'total',
         'tanggal',
     ];

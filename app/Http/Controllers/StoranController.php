@@ -42,7 +42,8 @@ class StoranController extends Controller
             'item_name'    => $r->item?->nama_item,
             'jumlah_barang'=> $r->jumlah_barang,
             'harga'        => $r->item?->harga_barang,
-            'label'        => 'Req #'.$r->id.' - '.($r->item?->nama_item ?? '-').' ('.$r->jumlah_barang.' karung)',
+            'label'        => 'Req #'.$r->id.' - '.($r->item?->nama_item ?? '-').' ('.$r->jumlah_barang.' kg)'
+                            .' - '.\Carbon\Carbon::parse($r->tanggal_request)->format('d/m/Y'),
         ]);
         return view('storan.tambah', compact('agent', 'items', 'agentRequests'));
     }
@@ -100,7 +101,8 @@ public function edit($id){
         'item_name'    => $r->item?->nama_item,
         'jumlah_barang'=> $r->jumlah_barang,
         'harga'        => $r->item?->harga_barang,
-        'label'        => 'Req #'.$r->id.' - '.($r->item?->nama_item ?? '-').' ('.$r->jumlah_barang.' karung)',
+        'label'        => 'Job #'.$r->id.' - '.($r->item?->nama_item ?? '-').' ('.$r->jumlah_barang.' kg)'
+                            .' - '.\Carbon\Carbon::parse($r->tanggal_request)->format('d/m/Y'),
     ]);
     return view('storan.edit', compact('storan', 'agent', 'items', 'agentRequests'));
 }

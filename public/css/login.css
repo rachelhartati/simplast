@@ -81,6 +81,20 @@ body{
     left: 180px;
 }
 
+.c4{
+    width: 220px;
+    height: 220px;
+    bottom: -60px;
+    right: -60px;
+}
+
+.c5{
+    width: 340px;
+    height: 340px;
+    bottom: -140px;
+    right: 70px;
+}
+
 /* ========================= */
 /* CHECK ICON */
 /* ========================= */

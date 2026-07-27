@@ -137,7 +137,7 @@
         .icon-box.purple{ background: #f5f0ff; } .icon-box.purple i{ color: #8b5cf6; }
 
         .card h4 { font-size: 12px; color: #777; font-weight: 500; margin-bottom: 4px; }
-        .card h2 { font-size: 22px; font-weight: 700; color: #111; }
+        .card h2 { font-size: 18px; font-weight: 700; color: #111; }
         .card small { font-size: 11px; color: #aaa; }
 
         /* ================= TABLE BOX ================= */

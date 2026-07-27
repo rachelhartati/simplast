@@ -59,6 +59,7 @@ class ItemController extends Controller
         $item->update([
             'nama_item' => $request->nama_item,
             'harga_barang' => $request->harga_barang,
+            'tarif_per_pcs'=>$request->tarif_per_pcs,
             'stok' => $request->stok,
         ]);
 

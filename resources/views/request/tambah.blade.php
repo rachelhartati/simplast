@@ -508,8 +508,8 @@
                             <div class="col-md-6">
                                 <label class="form-label">Jumlah(dalam karung)</label>
                                 <input type="number" class="form-control" placeholder="Masukkan jumlah"
-                                    name="jumlah_barang" min="1" id="jumlah_barang">
-                                <p class="form-text" id="info-stok"></p>
+                                    name="jumlah_barang" min="1" max="10" id="jumlah_barang">
+                                <p class="form-text" id="info-stok">Maksimal 10 karung per request</p>
                             </div>
 
                             <div class="col-md-6">
@@ -547,11 +547,26 @@
 
     </script>
     <script>
+        const MAX_KARUNG = 10;
+
         function updateStokInfo(select) {
-            const stok = select.options[select.selectedIndex]?.dataset.stok;
-            if (stok) {
-                document.getElementById('jumlah_barang').max = stok;
-                document.getElementById('info-stok').textContent = 'Stok tersedia: ' + stok + ' karung';
+            const stok = parseInt(select.options[select.selectedIndex]?.dataset.stok);
+            const jumlahInput = document.getElementById('jumlah_barang');
+            const infoStok = document.getElementById('info-stok');
+
+            if (!isNaN(stok)) {
+                // batas final = yang paling kecil antara sisa stok dan batas 10 karung
+                const batas = Math.min(stok, MAX_KARUNG);
+                jumlahInput.max = batas;
+
+                if (stok < MAX_KARUNG) {
+                    infoStok.textContent = `Stok tersedia: ${stok} karung (maksimal ${batas} karung)`;
+                } else {
+                    infoStok.textContent = `Stok tersedia: ${stok} karung. Maksimal 10 karung per request`;
+                }
+            } else {
+                jumlahInput.max = MAX_KARUNG;
+                infoStok.textContent = 'Maksimal 10 karung per request';
             }
         }
         const itemSelect = document.getElementById('item_id');
@@ -559,7 +574,7 @@
         if (itemSelect.value) updateStokInfo(itemSelect);
 
         document.getElementById('jumlah_barang').addEventListener('input', function () {
-            const max = parseInt(this.max);
+            const max = parseInt(this.max) || MAX_KARUNG;
             if (parseInt(this.value) > max) {
                 this.value = max;
             }
